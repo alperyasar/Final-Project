@@ -11,6 +11,7 @@ public class test : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        BusLine bus = new BusLine();
         /*   linerenderer = GetComponent<LineRenderer>();
            var points = new Vector3[20];
            Vector3 temp = new Vector3(3f, 0.19f, 3f);
