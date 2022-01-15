@@ -111,5 +111,31 @@ public class BusLine
             stationNames[index].listPassengers(showList);
         }
     }
+    public void busGetInStation(int stationNumber, int busNumber)
+    {
+        stationNames[stationNumber].setBus(busNumber);
+       
+    }
+    public void busGetOutStation(int stationNumber, int busNumber)
+    {
+        stationNames[stationNumber].removeBus(busNumber);
+
+    }
+    public int busInStation(int stationNumber, int busNumber)
+    {
+        return stationNames[stationNumber].busInStation();
+    }
+    public int passInStation(int stationNumber)
+    {
+        return stationNames[stationNumber].passInStation();
+    }
+    public Passengers getInBus(int stationNumber)
+    {
+        return stationNames[stationNumber].removePass();
+    }
+    public List<int> bussesPlate(int stationNumber)
+    {
+        return stationNames[stationNumber].bussesPlate();
+    }
 }
 

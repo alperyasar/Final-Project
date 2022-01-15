@@ -5,8 +5,8 @@ using System.Collections.Generic;
 public class Stations
 {
     private string stationName;
-    private int numberOfPassengers;
     private List<Passengers> pass;
+    private List<int> busses;
  //   public List<GameObject> showPassenger;
 
     private void Start()
@@ -16,8 +16,8 @@ public class Stations
     public Stations(string stationName)
     {
         this.stationName = stationName;
-        numberOfPassengers = 0;
         pass = new List<Passengers>();
+        busses = new List<int>();
     }
 
     public string getName()
@@ -26,33 +26,58 @@ public class Stations
     }
     public int getNumber()
     {
-        return numberOfPassengers;
+        return pass.Count;
     }
 
     public void addPassenger(Passengers pass)
     {
         this.pass.Add(pass);
-        numberOfPassengers++;
+    }
+    public void setBus(int i)
+    {
+        busses.Add(i);
     }
 
+    public void removeBus(int i)
+    {
+        busses.Remove(i);
+    }
+    public int busInStation()
+    {
+        return busses.Count;
+    }
+
+    public int passInStation()
+    {
+        return pass.Count;
+    }
+    public List<int> bussesPlate()
+    {
+        return busses;
+    }
     public void listPassengers(GameObject stationList)
     {
         GameObject temp = stationList;
         temp.SetActive(true);
-        for (int i = 0; i < numberOfPassengers; i++)
+        for (int i = 0; i < pass.Count; i++)
         {
             temp.transform.GetChild(i).gameObject.SetActive(true);
-            Debug.Log(i);
         }
     }
 
     public void closeList(GameObject stationList)
     {
         
-        for (int i = 0; i < numberOfPassengers; i++)
+        for (int i = 0; i < pass.Count; i++)
         {
             stationList.transform.GetChild(i).gameObject.SetActive(false);
         }
         stationList.SetActive(false);
+    }
+    public Passengers removePass()
+    {
+        Passengers temp = pass[0];
+        pass.RemoveAt(0);
+        return temp;
     }
 }

@@ -5,7 +5,7 @@ using UnityEngine;
 public class TimeConvert : MonoBehaviour
 {
     // Start is called before the first frame update
-    private int minute=29;
+    private int minute=28;
     private int hour=6;
 
     /// <summary>
