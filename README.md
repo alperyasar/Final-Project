@@ -17,10 +17,10 @@ getting in to behind bus. Otherwise the passengers, in front of the queue, get i
 bus. When the each passenger get in to the bus this condition checking. <br />
 
 ### Main Menu
-![Main Menu]<img src="https://github.com/alperyasar/Final-Project/blob/main/Assets/Source/Image/mainMenu.JPG" width="48">
+<img src="https://github.com/alperyasar/Final-Project/blob/main/Assets/Source/Image/mainMenu.JPG" alt="Main Menu" width="250"/>
 
 ### Simulation
-![Main Menu](https://github.com/alperyasar/Final-Project/blob/main/Assets/Source/Image/start1.JPG =250x250)
+<img src="https://github.com/alperyasar/Final-Project/blob/main/Assets/Source/Image/start1.JPG" alt="Simulation" width="250"/>
 
 ### Video
 [youtube link](https://youtu.be/0GYZYEgSoWw)
